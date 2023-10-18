@@ -3,15 +3,19 @@
 <span>{{quiz.title}} </span>
 <span>{{quiz.description}}</span>
 <h2>questions</h2>
-<ul>
-    <li *ngFor="let question of quiz.questions">
-        <p>{{question.question}}</p>
-        <form *ngFor="let answer of question.possible_answers">
-            <input type="checkbox" (click)="isCorrect(answer,question.correct_answer)" />
-            <label htmlFor="first-name">{{answer}}</label>
-        </form>
-    </li>
-</ul>
-<div *ngIf="isCorrectAnswer">
-    <h2>{{isCorrectAnswer}}</h2>
+<div>
+    <ul>
+        <li *ngFor="let question of quiz.questions">
+            <strong>{{ question.question }}</strong>
+            <ul>
+                <li *ngFor="let answer of question.possible_answers">
+                    <label>
+                        <input type="radio" [name]="question.id" [value]="answer.value"
+                            (change)="selectAnswer(question.id, answer)" />
+                        {{ answer.value }}
+                    </label>
+                </li>
+            </ul>
+        </li>
+    </ul>
 </div>

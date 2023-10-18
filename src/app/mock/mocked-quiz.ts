@@ -1,6 +1,6 @@
 import { Quiz } from "../interfaces/quiz"
 
-export const QUIZ :Quiz =
+export const QUIZ: Quiz =
 {
   id: 12,
   author_id: 13,
@@ -9,22 +9,22 @@ export const QUIZ :Quiz =
   questions:
     [
       {
-        question_id: "one",
+        id: "one",
         question: "pregunta 1",
         correct_answer: "respuesta 1",
-        possible_answers: ["respuesta 1", "respuesta 2", "respuesta 3", "respuesta 4"]
+        possible_answers: [{ value: "respuesta 1" }, { value: "respuesta 2" }, { value: "respuesta 3" }, { value: "respuesta 4" }]
       },
       {
-        question_id: "two",
+        id: "two",
         question: "pregunta 2",
         correct_answer: "respuesta 2",
-        possible_answers: ["respuesta 1", "respuesta 2", "respuesta 3", "respuesta 4"]
+        possible_answers: [{ value: "respuesta 1" }, { value: "respuesta 2" }, { value: "respuesta 3" }, { value: "respuesta 4" }]
       },
       {
-        question_id: "three",
+        id: "three",
         question: "pregunta 3",
         correct_answer: "respuesta 3",
-        possible_answers: ["respuesta 1", "respuesta 2", "respuesta 3", "respuesta 4"]
+        possible_answers: [{ value: "respuesta 1" }, { value: "respuesta 2" }, { value: "respuesta 3" }, { value: "respuesta 4" }]
       }
     ]
 }

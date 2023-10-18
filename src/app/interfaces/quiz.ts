@@ -1,4 +1,4 @@
-import { Question } from "./questions"
+import { Question, QuestionView } from "./questions"
 
 export interface Quiz {
     id: number,
@@ -6,4 +6,7 @@ export interface Quiz {
     title: string,
     description: string,
     questions:Question[]
+}
+export interface QuizView extends Quiz{
+    questions:QuestionView[]
 }
