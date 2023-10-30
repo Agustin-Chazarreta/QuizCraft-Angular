@@ -1,0 +1,19 @@
+<p>quiz-maker works!</p>
+<div>
+    <input id="title" [(ngModel)]="quiz.title" placeholder="title">
+
+    <input id="description" [(ngModel)]="quiz.description" placeholder="description">
+    <button (click)="createQuiz()">Crear</button>
+    <div *ngFor="let question of quiz.questions">
+        <input id="question" [(ngModel)]="question.question" placeholder="description">
+        <ul>
+            <li *ngFor="let answer of question.possible_answers">
+                <label>
+                    <input type="radio" [name]="question.id" [value]="answer.value"
+                        (click)="setCorrectAnswer(answer.value,question.id)">
+                    <input type="text" [(ngModel)]="answer.value" placeholder="answer" />
+                </label>
+            </li>
+        </ul>
+    </div>
+</div>

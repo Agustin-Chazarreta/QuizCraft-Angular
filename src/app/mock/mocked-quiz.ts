@@ -2,7 +2,7 @@ import { Quiz } from "../interfaces/quiz"
 
 export const QUIZ: Quiz =
 {
-  id: 12,
+  id: "12",
   author_id: 13,
   title: "MOCKED QUIZ",
   description: "this is a mocked quiz",

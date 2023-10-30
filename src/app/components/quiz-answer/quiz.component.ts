@@ -22,7 +22,7 @@ export class QuizComponent {
     if (answer.value === question?.correct_answer) {
       this.count += 1
     }
-    console.log(`Respondiste ${this.count}/${this.quiz.questions.length}`)
+    console.log(`Respondiste bien ${this.count}/${this.quiz.questions.length}`)
   }
   onSubmit() {
     console.log('quiz', this.quiz)
