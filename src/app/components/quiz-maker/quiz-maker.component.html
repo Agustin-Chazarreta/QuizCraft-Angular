@@ -1,5 +1,4 @@
 <div>
-    <!-- <input id="title" [(ngModel)]="quiz.title" placeholder="title"> -->
     <mat-form-field class="example-full-width">
         <mat-label>Message</mat-label>
         <input matInput #message maxlength="256" placeholder="Ex. I need help with...">
@@ -8,7 +7,6 @@
     </mat-form-field>
 
     <input id="description" [(ngModel)]="quiz.description" placeholder="description">
-    <button (click)="createQuiz()">Crear</button>
     <div *ngFor="let question of quiz.questions">
         <input id="question" [(ngModel)]="question.question" placeholder="description">
         <ul>
@@ -21,4 +19,6 @@
             </li>
         </ul>
     </div>
+    <app-button-shared [buttonType]="'mat-raised-button'" [color]="'primary'" [label]="'Crear Quiz'"
+        (click)="createQuiz()"></app-button-shared>
 </div>

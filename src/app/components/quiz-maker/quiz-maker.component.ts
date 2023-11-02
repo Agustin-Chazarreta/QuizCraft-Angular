@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 @Component({
   selector: 'app-quiz-maker',
   templateUrl: './quiz-maker.component.html',
-  styleUrls: ['./quiz-maker.component.css']
+  styleUrls: ['./quiz-maker.component.css'],
 })
 
 export class QuizMakerComponent {

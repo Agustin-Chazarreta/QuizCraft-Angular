@@ -15,13 +15,17 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatTabsModule } from '@angular/material/tabs';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { ButtonComponent } from './components/shared/button/button.component';
 @NgModule({
   declarations: [
     AppComponent,
     QuizComponent,
     QuizMakerComponent,
     FooterComponent,
-    ContainerComponent
+    ContainerComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,10 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatIconModule,
     MatInputModule,
     MatTabsModule,
-    NavigationComponent
+    MatButtonModule,
+    CommonModule,
+    NavigationComponent,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
