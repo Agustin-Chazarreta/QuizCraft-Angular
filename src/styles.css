@@ -1,9 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    height: 100%;
     margin: 0;
-    background-color: black;
-    color: white;
+    padding: 0;
   }
   
   .box {
@@ -32,3 +30,5 @@ body {
   .box .row.footer {
     flex: 0 1 40px;
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

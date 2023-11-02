@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Quiz } from 'src/app/interfaces/quiz';
 import { QUIZ } from 'src/app/mock/mocked-quiz';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-quiz-maker',
@@ -23,7 +24,7 @@ export class QuizMakerComponent {
     }
   }
   createQuiz() {
-    this.quiz.id = "13"
+    this.quiz.id = uuidv4()
     console.log('first', this.quiz)
   }
 }

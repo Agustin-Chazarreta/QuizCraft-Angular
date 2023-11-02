@@ -1,0 +1,12 @@
+<mat-toolbar class="container">
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <nav mat-tab-nav-bar [backgroundColor]="background" [tabPanel]="tabPanel">
+        <a mat-tab-link *ngFor="let route of routes" (click)="activeLink = route.path" [routerLink]="route.path"
+            [active]="activeLink === route.path">
+            {{route.title}}
+        </a>
+        <a mat-tab-link disabled>Disabled Link</a>
+    </nav>
+    <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+</mat-toolbar>

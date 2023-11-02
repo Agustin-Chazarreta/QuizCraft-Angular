@@ -1,0 +1,9 @@
+.example-spacer {
+    flex: 1 1 auto;
+    color: white;
+  }
+  .container{
+    background-color: rgb(83, 41, 121);
+    color: white;
+    height: 60px;
+  }
