@@ -18,6 +18,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { ButtonComponent } from './components/shared/button/button.component';
+import { InputComponent } from './components/shared/input/input.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,8 @@ import { ButtonComponent } from './components/shared/button/button.component';
     QuizMakerComponent,
     FooterComponent,
     ContainerComponent,
-    ButtonComponent
+    ButtonComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
@@ -40,8 +44,9 @@ import { ButtonComponent } from './components/shared/button/button.component';
     MatTabsModule,
     MatButtonModule,
     CommonModule,
+    MatCheckboxModule,
+    MatCardModule,
     NavigationComponent,
-
   ],
   providers: [],
   bootstrap: [AppComponent]

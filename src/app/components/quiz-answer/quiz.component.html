@@ -1,21 +1,26 @@
-<p>quiz works!</p>
+<div class="container">
+    <h1>{{quiz.title}} </h1>
+    <h2>{{quiz.description}}</h2>
+    <h2>Preguntas</h2>
+    <div class="listContainer">
+        <ul>
+            <li *ngFor="let question of quiz.questions">
+                <mat-card class="example-card">
+                    <mat-card-title>{{question.question}}</mat-card-title>
+                    <ul>
 
-<span>{{quiz.title}} </span>
-<span>{{quiz.description}}</span>
-<h2>questions</h2>
-<div>
-    <ul>
-        <li *ngFor="let question of quiz.questions">
-            <strong>{{ question.question }}</strong>
-            <ul>
-                <li *ngFor="let answer of question.possible_answers">
-                    <label>
-                        <input type="radio" [name]="question.id" [value]="answer.value"
-                            (change)="selectAnswer(question.id, answer)" />
-                        {{ answer.value }}
-                    </label>
-                </li>
-            </ul>
-        </li>
-    </ul>
+                        <li *ngFor="let posibleAnswer of question.possible_answers">
+                            <mat-card-content>
+                                <label for="">
+                                    <mat-checkbox [name]="question.id" [value]="posibleAnswer.value"
+                                        touch-target="wrapper" (change)="selectAnswer(question.id, posibleAnswer)" />
+                                    {{posibleAnswer.value}}
+                                </label>
+                            </mat-card-content>
+                        </li>
+                    </ul>
+                </mat-card>
+            </li>
+        </ul>
+    </div>
 </div>

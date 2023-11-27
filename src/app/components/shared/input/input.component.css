@@ -1,0 +1,9 @@
+.example-full-width{
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    box-sizing: border-box;
+    font-size: 16px;
+}

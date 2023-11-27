@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.listContainer li{
+margin: 3px;
+}
+
+li {
+    list-style-type: none;
+  }

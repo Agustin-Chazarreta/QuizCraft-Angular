@@ -16,7 +16,6 @@ import { routes } from './routes';
 })
 export class NavigationComponent {
   routes = routes
-
   activeLink = this.routes[0].path;
   background: ThemePalette = undefined;
 

@@ -4,27 +4,27 @@ export const QUIZ: Quiz =
 {
   id: "12",
   author_id: 13,
-  title: "MOCKED QUIZ",
-  description: "this is a mocked quiz",
+  title: "Titulo de quiz",
+  description: "Esta es la descripcion del quiz",
   questions:
     [
       {
         id: "one",
-        question: "pregunta 1",
-        correct_answer: "respuesta 1",
-        possible_answers: [{ value: "respuesta 1" }, { value: "respuesta 2" }, { value: "respuesta 3" }, { value: "respuesta 4" }]
+        question: "Cuantas letras tiene la palabra: CASA ?",
+        correct_answer: "4",
+        possible_answers: [{ value: "4" }, { value: "3" }, { value: "5" }, { value: "Ninguna" }]
       },
       {
         id: "two",
-        question: "pregunta 2",
-        correct_answer: "respuesta 2",
-        possible_answers: [{ value: "respuesta 1" }, { value: "respuesta 2" }, { value: "respuesta 3" }, { value: "respuesta 4" }]
+        question: "Cuantas letras tiene la palabra: NOSTRADAMUS ?",
+        correct_answer: "11",
+        possible_answers: [{ value: "13" }, { value: "10" }, { value: "11" }, { value: "12" }]
       },
       {
         id: "three",
-        question: "pregunta 3",
-        correct_answer: "respuesta 3",
-        possible_answers: [{ value: "respuesta 1" }, { value: "respuesta 2" }, { value: "respuesta 3" }, { value: "respuesta 4" }]
+        question: "Cuantas letras tiene la palabra: RAMPERIN ?",
+        correct_answer: "8",
+        possible_answers: [{ value: "6" }, { value: "7" }, { value: "9" }, { value: "8" }]
       }
     ]
 }

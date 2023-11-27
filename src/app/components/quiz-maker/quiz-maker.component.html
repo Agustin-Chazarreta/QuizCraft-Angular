@@ -1,20 +1,21 @@
-<div>
-    <mat-form-field class="example-full-width">
-        <mat-label>Message</mat-label>
-        <input matInput #message maxlength="256" placeholder="Ex. I need help with...">
-        <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint>
-        <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
-    </mat-form-field>
-
-    <input id="description" [(ngModel)]="quiz.description" placeholder="description">
+<div class="container">
+    <h1>Creacion de QUIZ</h1>
+    <h2>Elabora las preguntas, posibles respuestas y marca cual es la correcta de cada una</h2>
+    <app-shared-input labelInput="Titulo" placeholder="Escribe el titulo"></app-shared-input>
+    <app-shared-input id="description" labelInput="Descripcion" placeholder="Escribe una descripcion" ngDefaultControl
+        [(ngModel)]="quiz.description"></app-shared-input>
     <div *ngFor="let question of quiz.questions">
-        <input id="question" [(ngModel)]="question.question" placeholder="description">
+        <!-- <input id="question" [(ngModel)]="question.question" placeholder="description"> -->
+        <app-shared-input ngDefaultControl id="question" labelInput="Pregunta" placeholder="Escribe la pregunta"
+            [(ngModel)]="question.question"></app-shared-input>
         <ul>
             <li *ngFor="let answer of question.possible_answers">
                 <label>
                     <input type="radio" [name]="question.id" [value]="answer.value"
                         (click)="setCorrectAnswer(answer.value,question.id)">
-                    <input type="text" [(ngModel)]="answer.value" placeholder="answer" />
+                    <app-shared-input ngDefaultControl labelInput="Respuesta"
+                        placeholder="Escribe tus posibles respuestas" [(ngModel)]="answer.value"></app-shared-input>
+                    <!-- <input type="text" [(ngModel)]="answer.value" placeholder="answer" /> -->
                 </label>
             </li>
         </ul>
