@@ -1,0 +1,20 @@
+<div *ngIf="quiz?.questions?.length">
+    <h2>{{quiz?.questions![currentIndex].id}}</h2>
+    <h3>{{quiz?.questions![currentIndex].question}}</h3>
+    <mat-radio-group [(ngModel)]="selectedOptions[currentIndex]">
+        <div *ngFor="let posibleAnswer of quiz?.questions![currentIndex].possible_answers">
+            <mat-radio-button [value]="posibleAnswer.id">
+                {{posibleAnswer.value}}
+            </mat-radio-button>
+        </div>
+    </mat-radio-group>
+
+    <div *ngIf="canGoNext(); else finish">
+        <button (click)="nextStep()">Next</button>
+    </div>
+    <ng-template #finish>
+        <button (click)="finishQuiz()">
+            Finalizar
+        </button>
+    </ng-template>
+</div>
