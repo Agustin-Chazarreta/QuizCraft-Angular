@@ -1,0 +1,6 @@
+<div *ngFor="let quiz of availableQuiz">
+    <h2>{{quiz._id}}</h2>
+    <h3>{{quiz.title}}</h3>
+    <h4>{{quiz.description}}</h4>
+    <button (click)="redirectToQuiz(quiz._id)">Answer</button>
+</div>
