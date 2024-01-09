@@ -1,11 +1,11 @@
 <div class="container">
     <h1>Creacion de QUIZ</h1>
     <h2>Elabora las preguntas, posibles respuestas y marca cual es la correcta de cada una</h2>
-    <app-shared-input labelInput="Titulo" placeholder="Escribe el titulo"></app-shared-input>
+    <app-shared-input labelInput="Titulo" placeholder="Escribe el titulo" [(ngModel)]="quiz.title"
+        ngDefaultControl></app-shared-input>
     <app-shared-input id="description" labelInput="Descripcion" placeholder="Escribe una descripcion" ngDefaultControl
         [(ngModel)]="quiz.description"></app-shared-input>
     <div *ngFor="let question of quiz.questions">
-        <!-- <input id="question" [(ngModel)]="question.question" placeholder="description"> -->
         <app-shared-input ngDefaultControl id="question" labelInput="Pregunta" placeholder="Escribe la pregunta"
             [(ngModel)]="question.question"></app-shared-input>
         <ul>
@@ -14,8 +14,7 @@
                     <input type="radio" [name]="question.id" [value]="answer.value"
                         (click)="setCorrectAnswer(answer.id,question.id)">
                     <app-shared-input ngDefaultControl labelInput="Respuesta"
-                        placeholder="Escribe tus posibles respuestas" [(ngModel)]="answer.id"></app-shared-input>
-                    <!-- <input type="text" [(ngModel)]="answer.value" placeholder="answer" /> -->
+                        placeholder="Escribe tus posibles respuestas" [(ngModel)]="answer.value"></app-shared-input>
                 </label>
             </li>
         </ul>

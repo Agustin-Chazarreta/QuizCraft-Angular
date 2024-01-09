@@ -21,7 +21,7 @@ export class QuizListComponent implements OnInit {
   }
 
 
-  redirectToQuiz(id: string) {
+  redirectToQuiz(id?: string) {
     this.router.navigate(["/responder", id])
   }
 }

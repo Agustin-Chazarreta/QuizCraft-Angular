@@ -12,13 +12,12 @@ export class QuizMakerComponent {
   constructor(private quizApi: QuizApi) { }
   nextQuestionId = 1
   quiz: Quiz = {
-    _id: "658487b44a8e995be263318d",
     author_id: 12,
     title: "",
     description: "",
     questions: [
       {
-        id: 1,
+        id: 0,
         question: "",
         correct_answer: "",
         possible_answers: [{ value: "", id: "1" }, { value: "", id: "2" }, { value: "", id: "3" }, { value: "", id: "4" }]
@@ -49,14 +48,14 @@ export class QuizMakerComponent {
 
 
   createQuiz() {
+
     this.quiz.questions.forEach(question => {
       question.id = this.generateUniqueId();
     });
     this.nextQuestionId = 1;
-    console.log('this.quiz', this.quiz)
-    // this.quizApi.createQuiz(this.quiz).subscribe(res => {
-    //   console.log(res)
-    // })
+    this.quizApi.createQuiz(this.quiz).subscribe(res => {
+      console.log("res", res)
+    })
   }
 }
 
