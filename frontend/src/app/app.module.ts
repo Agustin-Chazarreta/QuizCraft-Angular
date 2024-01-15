@@ -25,6 +25,8 @@ import { QuizAnswerComponent } from './components/quiz-answer/quiz.component';
 import { AnswerRouteComponent } from './components/answer-route/answer-route.component';
 import { QuizListComponent } from './components/quiz-list-route/quiz-list-route.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './components/users/register/register.component';
+import { LoginComponent } from './components/users/login/login.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { HttpClientModule } from '@angular/common/http';
     InputComponent,
     QuizAnswerComponent,
     AnswerRouteComponent,
-    QuizListComponent
+    QuizListComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
